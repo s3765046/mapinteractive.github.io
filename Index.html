@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <title>Interactive Map Home</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+
+  /* Box */
+
+  * {  box-sizing: border-box;   }
+
+
+      body {
+        font-family: Adobe Devanagari;
+        padding: 15px;
+        background:#b3d1ff;
+      }
+
+      /* Title */
+      .header {
+        padding: 100px;
+        text-align: center;
+        background: black;
+        color: white;
+      }
+
+  /* Header background */
+      .header {
+        background-image: url(https://images.unsplash.com/photo-1578233798150-8c57db903cda?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
+        background-position: 32% 32%;
+        background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  padding: 80px;
+      }
+
+
+  .header h1 {
+  font-size: 40px;
+  }
+
+  /* sticky navigation bar */
+  #navbar {
+  overflow: hidden;
+  background-color: #ffffff;
+  opacity: 0.9;
+  }
+
+  #navbar a {
+  float: left;
+  display: block;
+  color:  #001f4d;
+  text-align: center;
+  padding: 35px 35px;
+  text-decoration: none;
+  font-size: 17px;
+  }
+
+  #navbar a:hover {
+  background-color: #ddd;
+  color: black;
+  }
+
+
+  .content {
+  padding: 16px;
+  }
+
+  .sticky {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  }
+
+  .sticky + .content {
+  padding-top: 100px;
+  }
+
+  /* Destination Table */
+      td,
+      th {
+        border: 0.5px solid #008ae6;
+        text-align: left;
+        padding: 8px;
+        width: 100%;
+        position: static;
+      }
+
+      tr:nth-child(even) {
+        background-color: #e0ebeb;
+        text-align: left;
+        width: 100%;
+      }
+
+      /* slideshow */
+  .mySlides {display:none;}
+
+  /* Two unequal columns that floats next to each other */
+  /* Left column */
+  .leftcolumn {   
+  float: left;
+  width: 65%;
+  background-color:#e6f0ff;
+  padding: 22px;
+  }
+
+  /* Right column */
+  .rightcolumn {
+  float: left;
+  width: 35%;
+  background-color: #e6f0ff;
+  padding: 34.2px;
+
+  }
+
+
+
+
+  /* Clear floats after the columns */
+  .row:after {
+  content: "";
+  display: table;
+  clear: both;
+  }
+
+
+  /* footer */
+  .footer {
+  font-size: 16px;
+        background-image: url(https://thumbs.gfycat.com/SmugHeavyDuiker-size_restricted.gif);
+        background-position: 50% 50%;
+       
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+        padding: 30px;
+        text-align: center;
+      
+        margin-top: 5px;
+        width:100%;
+      }
+
+
+  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+  }
+
+  /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+  @media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+  }
+
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <div class="header">
+    <h1>Explore Victoria</h1>
+    <p>Exploring the rich diversity and beauty of regional Victoria: Mapping tourist destinations in Victoria.</p>
+  </div><!-- Navigation bar -->
+  <div id="navbar">
+    <a href="Interactivemap.html">☞ Check the Webmap<br></a> <a href="About.html">☞ About</a>   <img src="https://live.staticflickr.com/65535/50249909263_3502c6a51c_m.jpg" style="float:right; height:100px;" title="Website Logo" alt="explore Victria"><br>
+  </div><!-- Navigation bar script -->
+  <script>
+  window.onscroll = function() {myFunction()};
+
+  var navbar = document.getElementById("navbar");
+  var sticky = navbar.offsetTop;
+
+  function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+  }
+
+  </script> <!-- Heading 1 left coloumn -->
+  <div class="row">
+    <div class="leftcolumn">
+      <div class="first">
+        <h2>About Victoria</h2><!-- Slide show images-->
+        <img class="mySlides" src="https://live.staticflickr.com/65535/50262983356_bbe5765044_o.jpg" style="float:inherit; width:100%; height:410px; border:white;" title="Victoria" alt="a">
+        <img class="mySlides" src="https://live.staticflickr.com/65535/50262983431_e4c1af6b94_o.jpg" style="float:inherit; width:100%; height:410px; border:white;" title="Victoria" alt="b">
+        <img class="mySlides" src="https://live.staticflickr.com/65535/50262983556_15215582a8_o.jpg" style="float:inherit; width:100%; height:410px; border:white;" title="Victoria" alt="c">
+        <img class="mySlides" src="https://live.staticflickr.com/65535/50263168722_cefcc6a236_o.jpg" style="float:inherit; width:100%; height:410px; border:white;" title="Victoria" alt="d"><img class="mySlides" src="https://images.unsplash.com/photo-1560075932-f2ea4578f183?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1094&amp;q=80" style="float:inherit; width:100%; height:410px; border:white;" title="Victoria" alt="1"> <img class="mySlides" src="https://images.unsplash.com/photo-1597200715107-0b30ad4baf36?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1055&amp;q=80" style="float:inherit; width:100%; height:410px; border:white;" title="Victoria" alt="2"> <img class="mySlides" src="https://images.unsplash.com/photo-1544142919-2a8cb06aa0dc?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1046&amp;q=80" style="float:inherit; width:100%; height:410px; border:white;" title="Victoria" alt="3"> <img class="mySlides" src="https://images.unsplash.com/photo-1560354617-c1f49d2f7a1b?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80" style="float:inherit; width:100%; height:410px; border:white;" title="Victoria" alt="4"> <img class="mySlides" src="https://images.unsplash.com/photo-1494236472818-d35e50e604cf?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1052&amp;q=80" style="float:inherit; width:100%; height:410px; border:white;" title="Victoria" alt="5"> <img class="mySlides" src="https://images.unsplash.com/photo-1578233798150-8c57db903cda?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80" style="float:inherit; width:100%; height:410px; border:white;" title="Victoria" alt="photo-1578233798150-8c57db903cda"> <img class="mySlides" src="https://images.unsplash.com/photo-1578236298373-926d5d1abd26?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80" style="float:inherit; width:100%; height:410px; border:white;" title="Victoria" alt="6"> <img class="mySlides" src="https://images.unsplash.com/photo-1544492947-94f4f3a98a2d?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80" style="float:inherit; width:100%; height:410px; border:white;" title="Victoria" alt="photo-1544492947-94f4f3a98a2d"> <img class="mySlides" src="https://images.unsplash.com/photo-1596430222039-4a2d7b4cd767?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80" style="float:inherit; width:100%; height:410px; border:white;" title="Victoria" alt="7"> <img class="mySlides" src="https://images.unsplash.com/photo-1544492966-326c77364b2a?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80" style="float:inherit; width:100%; height:410px; border:white;" title="Victoria" alt="9"> <img class="mySlides" src="https://images.unsplash.com/photo-1596033141213-528fff6c29ec?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80" style="float:inherit; width:100%; height:410px; border:white;" title="Victoria" alt="8"> <img class="mySlides" src="https://images.unsplash.com/photo-1583897113981-167a1df18567?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=967&amp;q=80" style="float:inherit; width:100%; height:410px; border:white;" title="Victoria" alt="10"> <img class="mySlides" src="https://images.unsplash.com/photo-1583750840390-1fd83137e14c?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80" style="float:inherit; width:100%; height:410px; border:white;" title="Victoria" alt="11"> <img class="mySlides" src="https://images.unsplash.com/photo-1591580688401-8d3227adef13?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80" style="float:inherit; width:100%; height:410px; border:white;" title="Victoria" alt="12"> <img class="mySlides" src="https://images.unsplash.com/photo-1577454692527-ee65e86b0b26?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80" style="float:inherit; width:100%; height:410px; border:white;" title="Victoria" alt="13"> <img class="mySlides" src="https://images.unsplash.com/photo-1576061812769-c0431f8270b1?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80" style="float:inherit; width:100%; height:410px; border:white;" title="Victoria" alt="14"> <img class="mySlides" src="https://images.unsplash.com/photo-1545293106-ba8c69c617ce?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1543&amp;q=80" style="float:inherit; width:100%; height:410px; border:white;" title="Victoria" alt="15"> <img class="mySlides" src="https://images.freeimages.com/images/large-previews/429/melbourne-skylines-2-1447007.jpg" style="float:inherit; width:100%; height:410px; border:white;" title="Melbourne,Victoria" alt="16"> <!-- slide show -->
+         
+        <script>
+
+
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+        }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}    
+        x[myIndex-1].style.display = "block";  
+        setTimeout(carousel, 3000); // Change image every 3 seconds
+        }
+        </script> <!-- Heading 1 info -->
+        <br>
+        <p>Victoria is the second-smallest state in Australia, covering 227,600 sq km.Victoria, south-east Australia province, occupies a continent's mountainous coastal area. Victoria is separated from New South Wales to the north by the Murray River for around 1,065 miles (1,715 km) long and by an additional border of about 110 miles (180 km) linking Cape Howe with the nearest Murray source. The western border is with South Australia, and the southern coastline on the Tasman Sea and the Indian (Southern) Ocean extends for approximately 1,045 miles (1,680 km) and includes the Port Phillip Bay peninsula. The state capital, Melbourne, sits at the head of the bay off Bass Strait. This compact area boasts a variety of diverse regions and attractions, with sweeping coastlines, sandy beaches, and wildlife-filled national parks and forests, plus wineries, lakes, and mountains offering skiing, climbing, and hiking.</p>
+      </div><!-- Heading 2 left coloumn -->
+      <div class="first">
+        <br>
+        <br>
+        
+        <h2>Explore Victoria</h2><!-- Heading 2 info -->
+        <p>Exploring the rich diversity and beauty of regional Victoria: Mapping tourist destinations in Victoria.The main aim of the web application would be to present an interactive story map showing the key regional Victorian tourist destinations. The application would help travelers and tourists to explore regional Victoria.</p>
+        <h5>The below map shows 9 destinations spread across Victoria. Each destination has unique experiences and adventures to offer. The destinations are carefully selected to cover the vast diversity and culture of the state of Victoria.</h5><img src="https://live.staticflickr.com/65535/50251431953_e8848a91c8_o.png" style="width:100%" title="Destination Map" ><br>
+        <br>
+        <!-- Heading 2 Video -->
+        <br>
+        <br>
+        <br>
+        <h2>Victoria your Happy Space!</h2><iframe style="width: 80%; height: 336px;" src="https://www.youtube.com/embed/kyCdMHZxYS0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <p>Video courtesy of <a href="https://www.youtube.com/channel/UCs0lcp-dnp5CfN64sLIyv1g" target="_blank">Visit Victoria</a>.</p>
+      </div>
+    </div><!-- Table 1 right coloumn -->
+    <div class="rightcolumn">
+      <div class="card"></div>
+      <div class="card">
+        <h2>Places to Visit!</h2>
+        <table>
+          <tr>
+            <th>Destination Name</th>
+            <th>Destination Type</th>
+          </tr>
+          <tr>
+            <td>Grampians National Park</td>
+            <td>Camping/Hiking</td>
+          </tr>
+          <tr>
+            <td>Twelve Apostles Marine National Park</td>
+            <td>Recreation</td>
+          </tr>
+          <tr>
+            <td>Daylesford</td>
+            <td>Natural Springs/Recreation</td>
+          </tr>
+          <tr>
+            <td>City of Melbourne</td>
+            <td>Shopping</td>
+          </tr>
+          <tr>
+            <td>Shire of Mornington Peninsulas</td>
+            <td>Hiking/Springs</td>
+          </tr>
+          <tr>
+            <td>Phillip Island</td>
+            <td>Nature/Wildlife</td>
+          </tr>
+          <tr>
+            <td>Yarra Valley & The Dandenongs</td>
+            <td>Nature/Wine</td>
+          </tr>
+          <tr>
+            <td>Mount Buller</td>
+            <td>Sking/Hiking</td>
+          </tr>
+          <tr>
+            <td>High Country</td>
+            <td>Mountain/History</td>
+          </tr>
+        </table><br>
+        <br>
+        <br>
+        <!-- Heading 2 Image right coloumn -->
+        <div class="row">
+          <br>
+          <br>
+          <div class="column"><img src="https://live.staticflickr.com/8464/8126838599_3475e43777.jpg" style="width:100%" title="Melbourne City" alt="8126838599_3475e43777"> <img src="https://www.visitvictoria.com/-/media/images/grampians/things-to-do/nature-and-wildlife/grampians-national-park_gra_r_143601_1150x863.jpg?ts=20171201190303" style="width:100%" title="Grampians" alt="grampians-national-park_gra_r_143601_1150x863"> <img src="https://i1.wp.com/goliveitblog.com/wp-content/uploads/2019/01/Sorrento-City-COVER-1.jpg?fit=4262%2C2131&amp;ssl=1" style="width:100%" title="Sorrento" alt="Sorrento-City-COVER-1"></div>
+          <div class="column"><img src="https://live.staticflickr.com/65535/49370414071_820405a0b6.jpg" style="width:100%" title="Phillip Island" alt="pexels-photo-3857215"> <img src="https://imgix.theurbanlist.com/content/article/things-to-do-dandenong-ranges.jpg?auto=format,compress&amp;w=740&amp;h=486&amp;fit=crop" style="width:100%" title="Dandenong" alt="things-to-do-dandenong-ranges"></div><br>
+          <br>
+          <br>
+        </div>
+      </div>
+    </div>
+  </div><!-- Footer -->
+  <div class="footer">
+    <h1 style="color:white; border: 5px solid white;padding: 3%">“THE WORLD IS A BOOK AND THOSE WHO DO NOT TRAVEL READ ONLY A PAGE.”</h1><br>
+    <a href="https://www.rmit.edu.au/news/all-news/2017/mar/tell-me-about-geospatial-science"><img alt="tell-me-about-geospatial-science" src="https://upload.wikimedia.org/wikipedia/commons/5/51/RMIT_University_Logo.svg" style="width: 20%;">
+    <p style="color:white;">Author: Lakshay Gupta</p></a><a href="mailto:s3765046@student.rmit.edu.au">Email me</a>
+  </div>
+</body>
+</html>
